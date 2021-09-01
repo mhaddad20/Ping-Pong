@@ -57,7 +57,7 @@ class Paddle
   end
   def track_ball(ball,frame)
 
-    if frame+OPPONENT_DELAY<Window.frames
+    if frame+OPPONENT_DELAY<Window.frames # response rate of the opponent based on the frame the ball was hit and responding later after a number of frames has passed
       if ball.ball_height>ball_height+8
         @y+=@speed
       elsif ball.ball_height<ball_height-8
