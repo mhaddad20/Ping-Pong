@@ -59,7 +59,7 @@ class BallTrajectory
     @y
 
   end
-  def draw
+  def draw # calculate the next position the ball will land
     new_coordinates = Coordinates.new(@ball.x_middle,@ball.y_middle,@ball.x_speed,@ball.y_speed)
     Line.new(x1:@ball.x_middle,y1:@ball.y_middle,x2:new_coordinates.x,y2:new_coordinates.y,color: 'black')
     @y=new_coordinates.y
